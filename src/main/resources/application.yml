@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: payment_service
+irembo:
+  pay:
+    api_url: ${IREMBO_PAY_BASE_URL}
+    api_key: ${IREMBO_PAY_API_KEY:""}
+    version: ${IREMBO_PAY_API_VERSION:"v2"}
+    secret_key: ${IREMBO_PAY_SECRET_KEY:""}
+
+springdoc:
+  pathsToMatch: /api/**
+  api-docs:
+    path: /api/v1/irembo/v3/api-docs
+    version: openapi_3_0
+    enabled: true
+  swagger-ui:
+    path: /api/v1/irembo/docs
